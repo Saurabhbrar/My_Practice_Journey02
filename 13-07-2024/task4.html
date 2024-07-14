@@ -6,7 +6,82 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>React Application</title>
     <style>
+        #navbar-list {
+            display: flex;
+           /*  border: 1px solid green; */
+            justify-content: space-between;
 
+
+        }
+
+        #navbar-list> :first-child {
+            background-color: #D35400;
+            display: flex;
+            width: 80%;
+            gap: 9%;
+
+        }
+
+        #navbar-list> :first-child>p {
+            font-size: 35px;
+            /*   */
+
+        }
+
+        #navbar-img {
+
+            height: 180px;
+            width: 15%;
+            border-radius: 10px;
+            background-color: #D35400;
+        }
+
+        img {
+            height: 90%;
+            width: 100%;
+            border-radius: 30px;
+
+        }
+
+
+        #main_main {
+           /*  border: 1px solid red; */
+            display: flex;
+        }
+
+        #main_main>:first-child {
+            /* border: 1px solid forestgreen; */
+            width: 15%;
+        }
+
+        #main_main>:first-child>p {
+            font-size: 30px;
+        }
+        #main_main>:last-child{
+            display: grid;
+            margin: auto;
+            width: 80%;
+            grid-template-columns: auto auto auto auto;
+            gap: 50px;
+            /* border: 2px solid red; */
+        }
+       
+        
+
+        #footer {
+            background-color: black;
+          /*   border: 1px solid red; */
+            height: 200px;
+            display: grid;
+            grid-template-columns: auto auto;
+            gap: 0px;
+            padding: 4%;
+
+        }
+
+        #footer>p {
+            color: aliceblue;
+        }
     </style>
 
 </head>
@@ -18,26 +93,37 @@
     <script src="https://www.unpkg.com/react@18.2.0/umd/react.production.min.js"></script>
     <script src="https://www.unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
     <script type="text/babel">
-        /*Task 3 :
-        Create a React Application :
-        This application should have the following components. 
-        Navbar Component :- 
-        div with id navbar with 2 children elements
-        child1 is a p element with text "navbar"
-        child2 is another p element with text "links will be displayed here"
-        Main Component
-        Fragment wrapper
-        it should have a p element with text "main content"
-        Footer Component
-        div with id footer
-        p element with text Footer*/
+        /*Task 4 :-Create a react application*/
+        function Product(src,name,price) {
+            return(
+                <div>
+                    <img src={src} alt="" style={{ width: '150px', height: '150px' }} />
+                    <p>{name}</p>
+                    <h3>{price}</h3>
+                </div>
+            )
 
+        }
         function Navbar() {
             return (
+                <List />
+            )
+        }
+        function List() {
+            return (
+                <div id="navbar-list">
+                    <div>
+                        <p>Home</p>
+                        <p>About</p>
+                        <p>Service</p>
+                        <p>Products</p>
+                        <p>Features</p>
+                        <p>Contact</p>
+                    </div>
+                    <div id="navbar-img">
+                        <img src="https://cdn.pixabay.com/photo/2016/12/27/13/10/logo-1933884_640.png" alt="" />
+                    </div>
 
-                <div id="navbar">
-                    <p>Navbar</p>
-                    <p>links will be displayed here</p>
                 </div>
 
             )
@@ -45,31 +131,72 @@
 
         function Main() {
             return (
-                <>
-                    <p>main content</p>
-                </>
+                <div id="main_main">
+                    <div>
+                        <p>Dashboard</p>
+                        <p>Profile</p>
+                        <p>Settings</p>
+                        <p>Users</p>
+                        <p>Reports</p>
+                        <p>Analytics</p>
+                        <p>Messages</p>
+                        <p>Projects</p>
+                    </div>
+                    <div>
+                            {Product("https://m.media-amazon.com/images/I/71fYAthCwfL._AC_SY200_.jpg","realme Buds Air 6",3299)}
+                            {Product("https://m.media-amazon.com/images/I/71fYAthCwfL._AC_SY200_.jpg","realme Buds Air 6",3299)}
+                            {Product("https://m.media-amazon.com/images/I/71fYAthCwfL._AC_SY200_.jpg","realme Buds Air 6",3299)}
+                            {Product("https://m.media-amazon.com/images/I/71fYAthCwfL._AC_SY200_.jpg","realme Buds Air 6",3299)}
+                            {Product("https://m.media-amazon.com/images/I/71fYAthCwfL._AC_SY200_.jpg","realme Buds Air 6",3299)}
+                            {Product("https://m.media-amazon.com/images/I/71fYAthCwfL._AC_SY200_.jpg","realme Buds Air 6",3299)}
+                            {Product("https://m.media-amazon.com/images/I/71fYAthCwfL._AC_SY200_.jpg","realme Buds Air 6",3299)}
+                            {Product("https://m.media-amazon.com/images/I/71fYAthCwfL._AC_SY200_.jpg","realme Buds Air 6",3299)}
+                            {Product("https://m.media-amazon.com/images/I/71fYAthCwfL._AC_SY200_.jpg","realme Buds Air 6",3299)}
+                            {Product("https://m.media-amazon.com/images/I/71fYAthCwfL._AC_SY200_.jpg","realme Buds Air 6",3299)}
+                            {Product("https://m.media-amazon.com/images/I/71fYAthCwfL._AC_SY200_.jpg","realme Buds Air 6",3299)}
+                            {Product("https://m.media-amazon.com/images/I/71fYAthCwfL._AC_SY200_.jpg","realme Buds Air 6",3299)}
+                            {Product("https://m.media-amazon.com/images/I/71fYAthCwfL._AC_SY200_.jpg","realme Buds Air 6",3299)}
+                            {Product("https://m.media-amazon.com/images/I/71fYAthCwfL._AC_SY200_.jpg","realme Buds Air 6",3299)}
+                            {Product("https://m.media-amazon.com/images/I/71fYAthCwfL._AC_SY200_.jpg","realme Buds Air 6",3299)}
+                            {Product("https://m.media-amazon.com/images/I/71fYAthCwfL._AC_SY200_.jpg","realme Buds Air 6",3299)}
+                    </div>
+                </div>
             )
         }
 
-        function Footer() {
 
+        function Footer() {
             return (
-                <div id="footer">
-                    <p>footer</p>
+                <div id="footer" >
+                    <p>About Us</p>
+                    <p>Contact</p>
+                    <p>Privacy Policy</p>
+                    <p>Terms of Service</p>
+                    <p>FAQ</p>
+                    <p>Newsletter Signup</p>
+                    <p>Site Map</p>
+                    <p>Careers</p>
+                    <p>Support</p>
+                    <p>Copyright Notice</p>
+                    <p>Location/Address</p>
+                    <p>Blog</p>
+
                 </div>
             )
         }
 
         function App() {
-            return(
-                <div>
+            return (
+                <>
                     <Navbar />
                     <Main />
                     <Footer />
-                </div>
+                </>
             )
-
         }
+
+
+
 
 
         const root = document.getElementById("root")
